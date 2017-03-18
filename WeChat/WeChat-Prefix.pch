@@ -1,0 +1,31 @@
+//
+//  WeChat-Prefix.pch
+//  WeChat
+//
+//  Created by 庄丹丹 on 2016/11/24.
+//  Copyright © 2016年 庄丹丹. All rights reserved.
+//
+
+#ifndef WeChat_Prefix_pch
+#define WeChat_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <UIKit/UIKit.h>
+
+#import "WCAccount.h"
+#import "CategoryZOE.h"
+#import "WCXMPPTool.h"
+
+#import "MBProgressHUD+HM.h"
+
+    //自定义日志
+    #ifdef DEBUG
+    //#define  WCLog(...) NSLog(__VA_ARGS__)
+    #define WCLog(...) NSLog(@"%s\n %@ \n\n",__func__,[NSString stringWithFormat:__VA_ARGS__])
+    #else
+
+    #endif
+
+#endif /* WeChat_Prefix_pch */
